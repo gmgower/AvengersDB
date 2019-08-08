@@ -2,6 +2,8 @@ import React from 'react';
 // import avengers from '../Data.js';
 import { Route, Link } from 'react-router-dom';
 
+import AvengerDetails from './AvengersDetails'
+
 
 
 const AvengerPage = (props) => {
@@ -22,7 +24,7 @@ const AvengerPage = (props) => {
       <Link to={`/avengers/${props.match.params.id}/movies`}>Movies</Link>
 
       {/* Nested Routes */}
-      <Route path="/avengers/:id/details" render={props => <p>{avenger.description}</p>}/>
+      <Route path="/avengers/:id/details" render={props => <AvengerDetails details={avenger.description}/> }/>
       <Route path="/avengers/:id/movies" render={props => <div>Movies List</div>} />
 
     </div>
