@@ -12,7 +12,7 @@ import avengers from './Data';
 
 
 function App() {
-  const [avengers, setAvengers] = useState([])
+  // const [avengers, setAvengers] = useState([])
 
   return (
     <div className='App'>
@@ -25,9 +25,9 @@ function App() {
         </li>
       </ul>
       <Route exact path='/' component={Home} />
-      <Route exact path='/avengers' component={AvengersList}  />
+      <Route exact path='/avengers' render={props => <AvengersList {...props} avengers={avengers} />}  />
       {/* Add dynamic route https://youtu.be/hoaxvh0Azic?t=600 */}
-      <Route path='/avengers/:id' component={AvengerPage} />
+      <Route path='/avengers/:id' render={props => <AvengerPage {...props} avengers={avengers} />} />
     </div>
   );
 }

@@ -6,7 +6,7 @@ import avengers from '../Data.js';
 const AvengerPage = (props) => {
     console.log(props)
     const id = props.match.params.id; // to match url
-    const avenger = avengers.find(avenger => `${avenger.id}` === id);
+    const avenger = props.avengers.find(avenger => `${avenger.id}` === id);
   
   return (
       <div>
