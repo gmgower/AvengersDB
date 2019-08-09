@@ -3,7 +3,7 @@ import React from 'react';
 import { Route, Link } from 'react-router-dom';
 
 import AvengerDetails from './AvengersDetails.jsx';
-import AvengerMovies from './AvengersDetails.jsx';
+import AvengerMovies from './AvengerMovies.jsx';
 
 const AvengerPage = props => {
   console.log(props);
